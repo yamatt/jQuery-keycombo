@@ -1,0 +1,92 @@
+License:
+
+    keyCombo - extends jQuery to give simpler key combo functionality
+    Copyright (C) 2010  Matthew Copperwaite
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Documentation:
+
+The idea behind this is that it is a more natural language implementation than
+the jQuery .bind() function. With this plugin you merely need to think of the
+buttons you want to assign, type it in and the function is needs to perform
+and you're done. Essentially brainless. There are some caveats, most browsers
+for example, will not let you over-ride alt+f for example. Also, function keys
+(F4 for example) are inaccessible. You could also, if you wanted, get the
+entire alphabet to trigger a function. However, just because you can do it,
+doesn't mean you should.
+
+Anyway, with this plugin you have a pretty extensible tool that would allow
+you to create a Web based OS and applications much more easily. A new
+application could automatically register it's shortcut keys on load with just
+a couple of lines of code.
+
+The best way to learn how to use the code is to read the example.html file,
+but if you want specifics: there are current two agruments to the main
+function: 'combo' and 'triggerFunction'.
+
+combo [String]
+This is a human readable string containing a list of keys by their name
+separated by the + character. Common key names are supported and even work
+with spaces in the key name. It is best to read the code for the list of
+currently supported key names, but there is also a list here:
+
+	o backspace
+	o tab
+	o enter
+	o shift
+	o ctrl
+	o alt
+	o pause
+	o caps
+	o esc
+	o pageup
+	o pagedown
+	o end
+	o home
+	o left
+	o up
+	o right
+	o down
+	o insert
+	o delete
+
+triggerFunction [Object(function)]
+This is an object that contains or links to the function you want to run when
+the key combo is pressed. Nothing is passed to that function so what you
+trigger cannot be dependant upon what buttons are pressed.
+
+Example usage:
+
+	$.keyCombo('ctrl+shift+g', function (){
+		$('#messages').html('You pressed ctrl+shift+g');
+	});
+
+	$.keyCombo('shift+f', function (){
+		alert('You pressed shift+f');
+	});
+
+
+These two functions state that you want to add the key combinations
+ctrl+shift+g and shift+f to keyCombo and assign functions that use jQuery to
+write to an element in the html which has an id of 'messages'. You could use
+almost any key combination and any function, your limit is your imagination.
+
+Contact:
+e-mail:		mattcopp@gmail.com
+twitter:	http://twitter.com/mattcopp
+identi.ca:	http://identi.ca/yamatt
+website:	http://localhosy.net
+git-repo:	http://git.localhosy.net
+dev-wiki:	http://dev.localhosy.net
