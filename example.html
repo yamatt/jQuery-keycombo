@@ -4,17 +4,17 @@
 		<title>keyCombo Example</title>
 		<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen" />
 		<script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
-		<script src="js/jquery.keycombo-0.1b.js" type="text/javascript"></script>
+		<script src="js/jquery.keycombo-0.2b.js" type="text/javascript"></script>
 		<script type="text/javascript">
 $(document).ready(function() {
-	$.keyCombo('ctrl+shift', function (){
+	$().keyCombo('ctrl+shift', function (){
 		$('#messages').html('Now press the shift and f together');
 	});
-	$.keyCombo('shift+f', function (){
+	$().keyCombo('shift+f', function (){
 		alert('You pressed shift+f');
 	});
 
-	$.keyCombo('esc', function (){
+	$().keyCombo('esc', function (){
 		$('#messages').html('Press the control and shift key together.');
 	});
 });
