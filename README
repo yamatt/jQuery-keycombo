@@ -22,10 +22,9 @@ The idea behind this is that it is a more natural language implementation than
 the jQuery .bind() function. With this plugin you merely need to think of the
 buttons you want to assign, type it in and the function is needs to perform
 and you're done. Essentially brainless. There are some caveats, most browsers
-for example, will not let you over-ride alt+f for example. Also, function keys
-(F4 for example) are inaccessible. You could also, if you wanted, get the
-entire alphabet to trigger a function. However, just because you can do it,
-doesn't mean you should.
+for example, may not let you over-ride alt+f. You could also, if you wanted,
+get the entire alphabet to trigger a function. However, just because you can
+do it, doesn't mean you should.
 
 Anyway, with this plugin you have a pretty extensible tool that would allow
 you to create a Web based OS and applications much more easily. A new
@@ -61,6 +60,7 @@ currently supported key names, but there is also a list here:
 	o down
 	o insert
 	o delete
+	o Functions keys (f1-12)
 
 triggerFunction [Object(function)]
 This is an object that contains or links to the function you want to run when

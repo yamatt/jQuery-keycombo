@@ -76,7 +76,8 @@ dev-wiki:	http://dev.localhosy.net
 						'right': 39, 'right arrow': 39, 'right-arrow': 39,
 						'down': 40, 'down arrow': 40, 'down-arrow': 40,
 						'insert': 45, 'ins': 45,
-						'delete': 46, 'del': 46
+						'delete': 46, 'del': 46,
+						'f1': 112, 'f2': 113, 'f3': 114, 'f4': 115, 'f5': 116, 'f6': 117, 'f7': 118, 'f8': 119, 'f9': 120, 'f10': 121, 'f11': 122, 'f12': 123
 					};
         
 			var comboArray = combo.split('+');
@@ -106,6 +107,7 @@ dev-wiki:	http://dev.localhosy.net
 			});
 		
 			jQuery(document).keydown(function (e) {
+				e.preventDefault();
 				var allPressed = true;
 				for (var i = 0; i < keys.length; i++) {
 					if(e.which == keys[i]['ascii']) {	//set that someone has depressed the key
